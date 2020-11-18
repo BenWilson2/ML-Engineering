@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# A shell script to initialize a new docker container that will host jupyter notebooks with the conda environment.
+docker run -i --name=airlineForecastExperiments -v ~/Documents/MLEngineeringNotebooks:/opt/notebooks -t -p 8888:8888 continuumio/anaconda3 bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && mkdir -p /opt/notebooks && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"
