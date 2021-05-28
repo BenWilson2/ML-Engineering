@@ -6,6 +6,9 @@ from scipy.stats import shapiro, normaltest, anderson
 import matplotlib.pyplot as plt
 from statsmodels.graphics.gofplots import qqplot
 
+### NOTE: This is for demonstration purposes ONLY. DO NOT run this
+### if you want to use your computer for the next few hours.
+
 data = pd.read_csv('/sf-airbnb-clean.csv')
 series = data['price']
 shapiro, pval = shapiro(series)
